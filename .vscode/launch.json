@@ -37,7 +37,7 @@
             "request": "launch",
             "mainClass": "Primes",
             "projectName": "hw4-ofekkatzav_310af705",
-            "args":"20"
+            "args":"30"
         },
         {
             "type": "java",

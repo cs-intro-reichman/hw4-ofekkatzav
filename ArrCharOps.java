@@ -163,7 +163,7 @@ public class ArrCharOps {
         int output = 0;
 
         if(str1.length()==0 || str2.length()==0)
-            output = -2;
+            return -2;
         
         if(str1.length() == str2.length()){
             for (int i = 0; i < Math.min(str2.length(),str1.length()); i++) {
