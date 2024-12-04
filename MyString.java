@@ -18,8 +18,16 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-       
-        return str.toLowerCase();
+        String resuString ="";
+        for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i); 
+            if(ch >= 'A' && ch <= 'Z'){
+                ch += 32;
+            }
+        resuString+=ch;  
+       }
+
+        return resuString;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
@@ -30,14 +38,19 @@ public class MyString {
         if(str1.length() < str2.length())
             return false;
 
-        for (int i = 0; i < str1.length(); i++) {
-            for(int j = str3.length(); j < str2.length(); j++){
-                if((str1.charAt(i) == str2.charAt(j)) || str1.charAt(i) == 32 ){
-                    str3 += str1.charAt(i);
+        for (int i = 0; i <= str1.length() - str2.length(); i++) {
+            if(str2.length() == str3.length())
+                break;
+            str3 = "";
+            for(int j = 0; j < str2.length(); j++){
+                if((str1.charAt(i+j) == str2.charAt(j))){
+                    str3 += str1.charAt(i+j);
+                }else {
                     break;
                 }
             }
         }
+        
         if(str2.length() != str3.length())
             return false;
         
